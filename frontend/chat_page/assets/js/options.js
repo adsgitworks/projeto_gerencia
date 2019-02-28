@@ -1,3 +1,4 @@
+
 (function(){
     const bt_user = getFromName('btopts',0)
 
@@ -39,8 +40,8 @@
             }
             tmp= setInterval(() =>Tamanho(200,200,tmp), 5);
         }
-    }
-     let dad = document.createElement('div')
+
+        let dad = document.createElement('div')
         dad.id = 'float_parent'
 
         c ++
@@ -75,5 +76,4 @@
             id('float_parent').style.top = `${bt_user.offsetTop + bt_user.offsetHeight + 5}px`
         }
     }  
-
 })()
