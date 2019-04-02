@@ -12,7 +12,7 @@
                 id('pic_area').remove()
                 id('name_area').style.height = (id('name_area').offsetHeight-80)+'px'
                 getFromSelector('#name_area > div:nth-child(3)').remove()
-                id('pencil').src = '../assets/images/correct.png'
+                id('pencil').src = './correct.png'
                 id('confirmChanges').remove()
               
                 id('nameipt').value = ''

@@ -1,10 +1,6 @@
 
 
 (function(){
-		
-	fetch('http://sandbox.api.simsimi.com/request.p?key=6e06030e-1f69-4b3e-bcd2-2ea0b7893edf&lc=pt&ft=1.0&text=eae')
-  .then(response => response.json())
-  .then(json => console.log(json))
 
 	getFromClass('pcontainer',0).onclick = function(){
 		if(!this.clicks){
@@ -18,8 +14,8 @@
 
 			})
 
-			function addMessage(text){
-				let messageHTML = `<div class="message-patern"><div class="span-patern"><div class="message">${text}</span></div></div>`
+			function addMessage(text,addons){
+				let messageHTML = `<div class="message-patern"><div style="${(addons ? addons : '')}" class="span-patern"><div class="message">${text}</span></div></div>`
 				id('allmsgs').insertAdjacentHTML('beforeend',messageHTML)
 			}
 
@@ -27,6 +23,10 @@
 				if(e.keyCode == 13){
 					if(e.target.value){
 						addMessage(e.target.value)
+						JsonPostRequest('/messages',JSON.stringify({msgsent: e.target.value}))
+						.then(res => {
+							addMessage(res,'background: white;')
+						})
 						e.target.value = ''
 					}
 				}

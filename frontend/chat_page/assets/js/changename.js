@@ -11,10 +11,6 @@ var events = [];
     id('confirmChanges').style.visibility = 'visible'
 
     id('confirmChanges').onclick = function(){
-        //sending request
-
-        let text = id('nameipt').value
-        JsonPostRequest('/getname',JSON.stringify( {name: text, token: window.location.toString().split('=')[1]} ))
         
         //changing attributes
 
