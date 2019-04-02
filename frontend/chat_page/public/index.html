@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>JSocial - chat</title>
+</head>
+<link href="./chatpage.css" rel="stylesheet"/>
+
+<body>
+	<main id="main_container">
+		 <div id="gid" style="position: absolute; width: 0px; height: 0px;"></div>
+
+        <div id="painel_user">
+            <div id="user_pic_container">
+                <img id="user_pic" src="./unknowuser.png">
+            </div>
+
+            <button name="btopts" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                <i class="material-icons">add</i>
+            </button>
+        </div>
+
+        <div id="search">
+            <div id="search_container">
+                <img id="search_icon" src="http://icons.iconarchive.com/icons/icons8/ios7/256/Very-Basic-Search-icon.png">
+                    
+                </img>
+                <input id="search_input" type="text" placeholder="Procurar amigo"/>
+            </div>
+        </div>
+
+         <div id="people" >
+             <div id="friends">
+                 <div class="pcontainer">
+                        <div class="user_pic_container">
+                            <img class="user-pic-min" src="./unknowuser.png"/>
+                        </div>
+                        <span class="searchedname">JBot</span>
+                </div>
+             </div>
+         </div>
+        
+        <div id="chat_area" style="background-color: #f7f9fa">
+
+            <div id="chat">
+                <div id="superior"></div>
+                <div id="area">
+                    <div id="mensagens">
+                        <div id="allmsgs"></div>
+                    </div>
+                    <div id="inputsarea">
+                        <div id="input-patern">
+                            <input placeholder="Digite uma mensagem" type="text" id="sentinput"/>
+                        </div>
+                        <div id="send-parent">
+                            <img src="./send.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="intro_area">
+               <div id="picarea">
+                   <img id="initialpic" src="./unknowuser.png"/>
+               </div>
+               <div id="textarea">
+                    <h1 id="fh2">Seja bem vindo ao JSocial</h1>
+                    <span id="txtintro">
+                        Adicione amigos e inicie uma conversa agora mesmo!
+                        O JSocial é um projeto baseado no <a class="txt-info" style="font-weight: bolder; text-decoration: none;" href="https://web.whatsapp.com">WhatsApp Web.</a>
+                        Para adicionar um amigo, clique no botão "+" que se encontra em seu perfil. Divirta-se no JSocial!
+                    </span>
+               </div>
+
+            </div>
+        </div>
+
+        <div id="user_infos">
+            <div id="green_area">
+                <div id="row">
+                    <img id="icback" src="./arrowleft.png"/>
+                    <span>Perfil</span>
+                </div>
+            </div>
+
+            <div id="pic_area">
+                <input type="file" id="picChange" changed="false" name="fileupload"/>
+                    <span sobrepor></span>
+                    <img id="user_pic_zoom" src="./unknowuser.png"/>
+            </div>
+
+            <div id="name_area">
+                <div>
+                    <span>Seu Nome</span>
+                </div>
+
+                <div>
+                    <input type="text" id="nameipt" value="indefinido" readonly="readonly"/>
+                    <img id="pencil" src="./pencil.png"/>
+                    <img id="confirmChanges" src="./correct.png">
+                    
+                </div>
+
+                <div>
+                    <span>Seu ID</span>
+                    
+                    <span id="iduser">3</span>
+                </div>
+
+            </div>
+        </div>
+        <script type="text/javascript" src="./utils.js"></script>
+		<script type="text/javascript" src="./options.js"></script>
+		<script type="text/javascript" src="./imagebutton.js"></script>
+		<script type="text/javascript" src="./changename.js"></script>
+		<script type="text/javascript" src="./changeUserPic.js"></script>
+		<script type="text/javascript" src="./findUser.js"></script>
+        <script type="text/javascript" src="./openchat.js"></script>
+	</main>
+</body>
+<htm>
