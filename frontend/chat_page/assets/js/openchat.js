@@ -1,5 +1,11 @@
+
+
 (function(){
-	
+		
+	fetch('http://sandbox.api.simsimi.com/request.p?key=6e06030e-1f69-4b3e-bcd2-2ea0b7893edf&lc=pt&ft=1.0&text=eae')
+  .then(response => response.json())
+  .then(json => console.log(json))
+
 	getFromClass('pcontainer',0).onclick = function(){
 		if(!this.clicks){
 
@@ -26,6 +32,8 @@
 				}
 			})
 		}
+
+
 
 	}
 })()
